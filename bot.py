@@ -1078,10 +1078,20 @@ def run():
 asyncio.set_event_loop(loop)
 
 
-    # Run bot
+     # Run bot
     bot = loop.run_until_complete(initialize_bot())
+
     if sys.platform != 'win32':
         import signal
+
+        async def shutdown(bot):
+            logger.info("Starting graceful shutdown...")
+            tasks = [t for t in asyncio.all_tasks() if t is not asyncio.current_task()]
+            for task in tasks:
+                task.cancel()
+            await asyncio.gather(*tasks, return_exceptions=True)
+            await bot.stop()
+            logger.info("Shutdown complete")
 
         def signal_handler(sig, frame):
             logger.info(f"Received signal {sig}, shutting down gracefully...")
@@ -1090,24 +1100,8 @@ asyncio.set_event_loop(loop)
         signal.signal(signal.SIGINT, signal_handler)
         signal.signal(signal.SIGTERM, signal_handler)
 
-    async def shutdown(bot):
-        """Graceful shutdown handler"""
-        logger.info("Starting graceful shutdown...")
-
-        # Cancel all running tasks
-        tasks = [t for t in asyncio.all_tasks() if t is not asyncio.current_task()]
-        for task in tasks:
-            task.cancel()
-
-        # Wait for all tasks to complete
-        await asyncio.gather(*tasks, return_exceptions=True)
-
-        # Close bot connections
-        await bot.stop()
-
-        logger.info("Graceful shutdown complete")
-
     bot.run()
+
 
 
 if __name__ == "__main__":
