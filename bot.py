@@ -1077,8 +1077,21 @@ def run():
     loop = asyncio.new_event_loop()
 asyncio.set_event_loop(loop)
 
+def run():
+    """Main entry point. Safe for Render / Python 3.13"""
 
-     # Run bot
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
+
+    logging.getLogger("pyrogram").setLevel(logging.WARNING)
+    logging.getLogger("imdbpy").setLevel(logging.WARNING)
+
+    # Safe event loop
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
     bot = loop.run_until_complete(initialize_bot())
 
     if sys.platform != 'win32':
@@ -1101,7 +1114,6 @@ asyncio.set_event_loop(loop)
         signal.signal(signal.SIGTERM, signal_handler)
 
     bot.run()
-
 
 
 if __name__ == "__main__":
