@@ -8,19 +8,6 @@ from core.cache.config import CacheKeyGenerator, CacheTTLConfig
 from core.utils.performance import performance_monitor, PerformanceMonitor
 from handlers.manager import HandlerManager
 
-UVLOOP_AVAILABLE = False
-if sys.platform != 'win32':
-    try:
-        import uvloop
-        asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-        UVLOOP_AVAILABLE = True
-        print("✅ uvloop installed - using optimized event loop")
-    except ImportError:
-        UVLOOP_AVAILABLE = False
-        print("⚠️ uvloop not installed - using default event loop")
-        print("   Install with: pip install uvloop")
-else:
-    UVLOOP_AVAILABLE = False
 
 import logging
 import os
@@ -1086,11 +1073,10 @@ def run():
         except (ValueError, OSError) as e:
             logger.debug(f"Could not set resource limit: {e}")
             pass
-    try:
-        loop = asyncio.get_running_loop()
-    except RuntimeError:
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
+            
+    loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
+
 
     # Run bot
     bot = loop.run_until_complete(initialize_bot())
