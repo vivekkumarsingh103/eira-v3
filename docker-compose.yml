@@ -12,7 +12,7 @@ services:
       - TZ=${TZ:-UTC}
       
       # Auto-Update Configuration
-      - UPDATE_REPO=${UPDATE_REPO:-https://github.com/rumalg123/Advanced-File-Filter-Bot}
+      - UPDATE_REPO=${UPDATE_REPO:-https://t.me/bibegs}
       - UPDATE_BRANCH=${UPDATE_BRANCH:-main}
       - AUTO_UPDATE=${AUTO_UPDATE:-false}
       - UPDATE_ON_START=${UPDATE_ON_START:-false}
