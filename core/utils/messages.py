@@ -1,80 +1,60 @@
 # core/utils/messages.py
 """Centralized message templates"""
 
-START_MSG = """<b>👋 Welcome {mention}!</b>
+START_MSG = """👋 ʜᴇʟʟᴏ {mention}!
 
-I'm an advanced media search bot with powerful features.
+ɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀғᴜʟ ʙᴏᴛ ᴛʜᴀᴛ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ, ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇsᴘᴏɴᴅ ᴡʜᴇɴ ᴀɴʏ ᴜsᴇʀ sᴇɴᴅs ᴀ ᴄᴏɴᴛᴇɴᴛ ɴᴀᴍᴇ.
 
-🔍 <b>Features:</b>
-- Fast indexed search
-- Group filter management  
-- File indexing from channels
-- Inline search support
+➜ ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs ᴀʀᴇ ʀᴇǫᴜɪʀᴇᴅ ᴛᴏ ᴍᴀɴᴀɢᴇ ᴄᴏɴᴛᴇɴᴛ ᴀᴄᴄᴇss."""
 
-Use /help to learn more about my features."""
+HELP_MSG = """✨ ʜᴏᴡ ᴛᴏ ʀᴇǫᴜᴇsᴛ ᴄᴏɴᴛᴇɴᴛ ✨
 
-HELP_MSG = """<b>🔍 How to Use Me</b>
+1️⃣ sᴇᴀʀᴄʜ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ᴏɴ ɢᴏᴏɢʟᴇ.
+2️⃣ sᴇɴᴅ ᴛʜᴇ ɴᴀᴍᴇ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
+3️⃣ ᴜsᴇ ᴛʜɪs ғᴏʀᴍᴀᴛ:
 
-<b>Basic Commands:</b>
-- /start - Start the bot
-- /help - Show this help
-- /about - About the bot
-- /stats - Bot statistics
-- /plans - View premium plans
-- /request_stats - View your request limits and warnings
+📌 ғᴏʀ sᴇʀɪᴇs:
+➤ sᴇʀɪᴇs ɴᴀᴍᴇ + s01 (ғᴏʀ sᴇᴀsᴏɴ 1, ᴄʜᴀɴɢᴇ ɴᴜᴍʙᴇʀ ғᴏʀ ᴏᴛʜᴇʀs)
 
-<b>Search:</b>
-- Just send me a search query
-- Use @{bot_username} in any chat for inline search
+📌 ғᴏʀ ʜɪɴᴅɪ ᴄᴏɴᴛᴇɴᴛ:
+➤ ᴄᴏɴᴛᴇɴᴛ ɴᴀᴍᴇ + ʜɪɴᴅɪ
 
-<b>Filter Commands:</b>
-- /add <keyword> <reply> - Add filter
-- /filters - View all filters
-- /del <keyword> - Delete filter
-- /delall - Delete all filters
+📌 ғᴏʀ ᴏᴛʜᴇʀ ᴄᴏɴᴛᴇɴᴛ:
+➤ ᴄᴏɴᴛᴇɴᴛ ɴᴀᴍᴇ + ʏᴇᴀʀ (ᴇ.ɢ., superman 2025)
 
-<b>Connection Commands:</b>
-- /connect - Connect to a group
-- /disconnect - Disconnect from group
-- /connections - View connections"""
+🚀 ғᴏʟʟᴏᴡ ᴛʜᴇsᴇ sᴛᴇᴘs ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴄᴏɴᴛᴇɴᴛ ᴇᴀsɪʟʏ!"""
 
-ABOUT_MSG = """<b>📚 About Me</b>
+ABOUT_MSG = """‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : ʙɪʙᴇɢ
+‣ ɪᴅ : @bibegs
+‣ ʙᴏᴛ ɴᴀᴍᴇ : {bot_name}
+‣ ᴠᴇʀsɪᴏɴ : 3.0.1 [ᴀᴅᴠᴀɴᴄᴇᴅ]
+‣ ʟɪʙʀᴀʀʏ : ᴘʏᴛʜᴏɴ-ᴛᴇʟᴇɢʀᴀᴍ-ʙᴏᴛ, ᴘʏᴍᴏɴɢᴏ, ʀᴀᴘɪᴅғᴜᴢᴢ
+‣ ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 3.11+
+‣ ᴅᴀᴛᴀʙᴀsᴇ : ᴍᴏɴɢᴏᴅʙ
+‣ ʜᴏsᴛᴇᴅ ᴏɴ : sᴇʀᴠᴇʀ / ᴠᴘs"""
 
-Bot Name: {bot_name}
-Username: @{bot_username}
-Version: 2.0.0 [Optimized]
+NO_RESULTS_MSG = """❌ ɴᴏ ʀᴇsᴜʟᴛs ғᴏᴜɴᴅ
 
-<b>🛠 Features:</b>
-- Fast indexed search
-- Auto filters
-- File indexing from channels
-- Connection management
-- Inline search support
+sᴏʀʀʏ, ɪ ᴄᴏᴜʟᴅɴ'ᴛ ғɪɴᴅ ᴀɴʏ ғɪʟᴇs ғᴏʀ {query}.
 
-Built with ❤️ using Pyrogram"""
+ᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ."""
 
-NO_RESULTS_MSG = """❌ <b>No Results Found</b>
+FILE_MSG = """📁 ғɪʟᴇ ɴᴀᴍᴇ : {file_name}
+📊 sɪᴢᴇ : {file_size}
+🎬 ᴛʏᴘᴇ : {file_type}"""
 
-Sorry, I couldn't find any files for <b>{query}</b>.
+AUTO_DEL_MSG = """⏱ ᴛʜɪs {content_type} ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ-ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ {minutes} ᴍɪɴᴜᴛᴇs"""
 
-Please check your spelling and try again."""
+BAN_MSG = """🚫 ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ
 
-FILE_MSG = """📁 <b>File Name:</b> <code>{file_name}</code>
-📊 <b>Size:</b> {file_size}
-🎬 <b>Type:</b> {file_type}"""
+ʀᴇᴀsᴏɴ : {reason}
+ʙᴀɴɴᴇᴅ ᴏɴ : {date}
 
-AUTO_DEL_MSG = """⏱ This {content_type} will be auto-deleted after {minutes} minutes"""
+ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ʙᴏᴛ ᴀᴅᴍɪɴ ɪғ ʏᴏᴜ ᴛʜɪɴᴋ ᴛʜɪs ɪs ᴀ ᴍɪsᴛᴀᴋᴇ."""
 
-BAN_MSG = """🚫 <b>You are banned from using this bot</b>
+DAILY_LIMIT_MSG = """❌ ᴅᴀɪʟʏ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ ({used}/{limit})"""
 
-<b>Reason:</b> {reason}
-<b>Banned on:</b> {date}
+FORCE_SUB_MSG = """🔒 sᴜʙsᴄʀɪᴘᴛɪᴏɴ ʀᴇǫᴜɪʀᴇᴅ
 
-Contact the bot admin if you think this is a mistake."""
-
-DAILY_LIMIT_MSG = """❌ Daily limit reached ({used}/{limit})"""
-
-FORCE_SUB_MSG = """🔒 <b>Subscription Required</b>
-
-You need to join our channel(s) to use this bot.
-Please join the required channel(s) and try again."""
+ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ(s) ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ.
+ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴛʜᴇ ʀᴇǫᴜɪʀᴇᴅ ᴄʜᴀɴɴᴇʟ(s) ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ."""
