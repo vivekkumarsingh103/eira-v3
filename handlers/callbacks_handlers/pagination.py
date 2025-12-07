@@ -117,9 +117,9 @@ class PaginationCallbackHandler(BaseCommandHandler):
             ])
 
         # Update message
-await query.message.edit_text(
-    f"🔍 <b>Search Results for:</b> {search_query}",
-    reply_markup=InlineKeyboardMarkup(buttons)
-)
+        await query.message.edit_text(
+            f"🔍 <b>Search Results for:</b> {search_query}",
+            reply_markup=InlineKeyboardMarkup(buttons)
+        )
 
-await query.answer()
+        await query.answer()
