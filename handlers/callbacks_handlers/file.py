@@ -58,7 +58,7 @@ class FileCallbackHandler(BaseCommandHandler):
             pm_link = f"https://t.me/{bot_username}?start={self.encode_file_identifier(file_identifier)}"
 
             await query.answer(
-                "📩 Click here to get the file in PM",
+                "📩 GET IN PM 📩",
                 url=pm_link
             )
             return
@@ -180,7 +180,7 @@ class FileCallbackHandler(BaseCommandHandler):
             pm_link = f"https://t.me/{bot_username}?start=sendall_{search_key}"
 
             await query.answer(
-                "📩 Click here to get all files in PM",
+                "📩 GET IN PM 📩",
                 url=pm_link
             )
             return
@@ -286,9 +286,6 @@ class FileCallbackHandler(BaseCommandHandler):
                 chat_id=user_id,
                 text=(
                     f"📤 <b>Sending Files</b>\n"
-                    f"Query: {search_query}\n"
-                    f"Total Files: {len(files_data)}\n"
-                    f"Progress: 0/{len(files_data)}"
                 )
             )
         except UserIsBlocked:
@@ -346,11 +343,6 @@ class FileCallbackHandler(BaseCommandHandler):
                     try:
                         await status_msg.edit_text(
                             f"📤 <b>Sending Files</b>\n"
-                            f"Query: {search_query}\n"
-                            f"Total Files: {len(files_data)}\n"
-                            f"Progress: {idx + 1}/{len(files_data)}\n"
-                            f"✅ Success: {success_count}\n"
-                            f"❌ Failed: {failed_count}"
                         )
                     except:
                         pass
