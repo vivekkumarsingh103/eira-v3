@@ -93,7 +93,15 @@ class PaginationCallbackHandler(BaseCommandHandler):
         # Build file buttons
         buttons = []
 
-        # Add individual file buttons (one per row)
+        # Add "Send All Files" button as the first button
+        if files:
+            buttons.append([
+                InlineKeyboardButton(
+                    f"📤 Send All Files ({len(files)})",
+                    callback_data=f"sendall#{search_key}"
+                )
+            ])
+
         for file in files:
             file_identifier = file.file_unique_id if file.file_unique_id else file.file_id
             file_emoji = get_file_emoji(file.file_type, file.file_name, file.mime_type)
@@ -107,18 +115,11 @@ class PaginationCallbackHandler(BaseCommandHandler):
         pagination_buttons = pagination.build_pagination_buttons()
         buttons.extend(pagination_buttons)
 
-        # Add "Send All Files" button at the BOTTOM (after pagination)
-        if files:
-            buttons.append([
-                InlineKeyboardButton(
-                    f"📁GET VIA PM📁({len(files)})",
-                    callback_data=f"sendall#{search_key}#{callback_user_id}"  # Added user_id for consistency
-                )
-            ])
-
         # Update message
         await query.message.edit_text(
-            f"🔍 <b>Search Results for:</b> {search_query}",
+            f"🔍 <b>Search Results for:</b> {search_query}\n"
+            f"📁 Found {total} files\n"
+            f"📊 Page {pagination.current_page} of {pagination.total_pages}",
             reply_markup=InlineKeyboardMarkup(buttons)
         )
 
