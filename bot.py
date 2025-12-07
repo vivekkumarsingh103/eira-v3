@@ -367,7 +367,6 @@ class MediaSearchBot(Client):
                 BotCommand("start", "✨ Start the bot"),
                 BotCommand("help", "📚 Show help message"),
                 BotCommand("about", "ℹ️ About the bot"),
-                BotCommand("stats", "📊 Bot statistics"),
                 BotCommand("plans", "💎 View premium plans"),
                 BotCommand("request_stats","📝 View your request limits and warnings"),
             ]
@@ -411,6 +410,7 @@ class MediaSearchBot(Client):
 
             # Admin-only commands
             admin_basic_commands = [
+                BotCommand("stats", "📊 Bot statistics"),
                 BotCommand("users", "👥 Get users count"),
                 BotCommand("broadcast", "📢 Broadcast message"),
                 BotCommand("stop_broadcast", "🛑 Stop ongoing broadcast"),
