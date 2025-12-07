@@ -1,21 +1,66 @@
-MIT License
+# MIT License
 
-Copyright (c) 2025 Rumal Gunawardhana
+**Copyright (c) 2025 Bibeg Technologies**
+
+**Enhanced License Terms:**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+to **use, copy, modify, merge, publish, distribute, sublicense, and/or sell**
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. **Attribution Requirement:** The above copyright notice and this permission 
+   notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. **No Warranty Disclaimer:** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY 
+   OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+3. **Liability Limitation:** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS 
+   BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION 
+   OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH 
+   THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## **Additional Terms for Commercial Use:**
+
+4. **Commercial Use Notification:** For commercial applications, users are encouraged 
+   (but not required) to notify Bibeg Technologies about their implementation.
+
+5. **Attribution in Documentation:** When distributing modified versions, please 
+   acknowledge the original work with the following attribution:
+   "Based on software originally developed by Bibeg Technologies."
+
+6. **No Trademark Rights:** This license does not grant permission to use the trade 
+   names, trademarks, service marks, or product names of Bibeg Technologies.
+
+## **User Rights & Responsibilities:**
+
+**You are free to:**
+- ✅ Use the software commercially
+- ✅ Modify and create derivative works  
+- ✅ Distribute the software
+- ✅ Place your own warranty
+- ✅ Use privately
+
+**You must:**
+- 📋 Include the copyright notice
+- 📋 Include the license text
+- 📋 Disclose any source code changes if distributing
+
+**You may not:**
+- 🚫 Hold the authors liable for damages
+- 🚫 Use Bibeg Technologies' trademarks
+- 🚫 Claim you wrote the original software
+
+## **Simplified Summary:**
+
+This is an **open-source, permissive license** that allows you to:
+1. **Do almost anything** with this software
+2. **Keep changes private** if you want
+3. **Use commercially** without fees
+4. **Modify freely** as needed
+
+**Just remember to:** Keep the copyright notice and don't sue us if something goes wrong!
+
