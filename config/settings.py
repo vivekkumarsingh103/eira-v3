@@ -253,7 +253,7 @@ class MessageConfig(BaseSettings):
         description="Auto-delete message template"
     )
     start_message: str = Field(
-        default="👋 Hello! I'm a file search bot. Send me any file name and I'll try to find it for you.",
+        default="👋 ʜᴇʟʟᴏ\n\nɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀғᴜʟ ʙᴏᴛ ᴛʜᴀᴛ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ, ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇsᴘᴏɴᴅ ᴡʜᴇɴ ᴀɴʏ ᴜsᴇʀ sᴇɴᴅs ᴀ ᴄᴏɴᴛᴇɴᴛ ɴᴀᴍᴇ.\n\n➜ ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs ᴀʀᴇ ʀᴇǫᴜɪʀᴇᴅ ᴛᴏ ᴍᴀɴᴀɢᴇ ᴄᴏɴᴛᴇɴᴛ ᴀᴄᴄᴇss.",
         description="Start command message template"
     )
     
@@ -261,7 +261,7 @@ class MessageConfig(BaseSettings):
     support_group_url: str = Field(default='', description="Support group URL")
     support_group_name: str = Field(default='Support Group', description="Support group name")
     payment_link: str = Field(
-        default='https://buymeacoffee.com/matthewmurdock001',
+        default='https://t.me/bibegs',
         description="Payment link"
     )
 
@@ -278,7 +278,7 @@ class UpdateConfig(BaseSettings):
     )
     
     repo: str = Field(
-        default="https://github.com/rumalg123/Advanced-File-Filter-Bot.git",
+        default="https://t.me/bibegs",
         description="Update repository URL"
     )
     branch: str = Field(default="main", description="Update branch")
