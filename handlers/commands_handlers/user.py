@@ -72,7 +72,7 @@ class UserCommandHandler(BaseCommandHandler):
             await deeplink_handler.handle_deep_link_internal(client, message, message.command[1])
             return
 
-        # Send welcome message (rest of the original code remains the same)
+        # Send welcome message with simplified buttons
         buttons = [
             [
                 InlineKeyboardButton(
@@ -83,10 +83,6 @@ class UserCommandHandler(BaseCommandHandler):
             [
                 InlineKeyboardButton("📚 Help", callback_data="help"),
                 InlineKeyboardButton("ℹ️ About", callback_data="about")
-            ],
-            [
-                InlineKeyboardButton("📊 Stats", callback_data="stats"),
-                InlineKeyboardButton("💎 Premium", callback_data="plans")
             ]
         ]
 
@@ -98,13 +94,6 @@ class UserCommandHandler(BaseCommandHandler):
                 )
             ])
 
-        buttons.append([
-            InlineKeyboardButton("📁 Search Files", switch_inline_query_current_chat='')
-        ])
-
-        buttons.append([
-            InlineKeyboardButton("🍺 Buy me a Beer", url=self.bot.config.PAYMENT_LINK)
-        ])
         custom_start_message = None
         if self.bot.config.START_MESSAGE:
             custom_start_message = self.bot.config.START_MESSAGE
