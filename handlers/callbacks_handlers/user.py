@@ -152,6 +152,8 @@ class UserCallbackHandler(BaseCommandHandler):
         InlineKeyboardButton("🎌 Help", callback_data="help"),
         InlineKeyboardButton("🎃 About", callback_data="about")
     ]
+
+        ]
         mention = query.from_user.mention
         welcome_text = config_messages.START_MSG.format(mention=mention)
 
