@@ -48,13 +48,14 @@ class CacheTTLConfig:
     # Rate limiting
     RATE_LIMIT_COOLDOWN: int = 3600  # 1 hour for rate limit cooldowns
     
-    # Timing delays (in seconds)
+    # Timing delays (in seconds) - AUTO DELETE CHANGED TO 60 SECONDS
     CHANNEL_INDEX_DELAY: int = 5  # Channel indexing delay
     INDEXING_FLOOD_DELAY: int = 2  # Anti-flood delay during indexing
     FILE_OPERATION_DELAY: int = 1  # File operation delay
     MAINTENANCE_CHECK_INTERVAL: int = 360  # 6 minutes
     MAINTENANCE_RETRY_DELAY: int = 3600  # 1 hour on error
-    MAINTENANCE_RESET_DAILY_COUNTERS: int = 90000 #25 hours
+    MAINTENANCE_RESET_DAILY_COUNTERS: int = 90000  # 25 hours
+    AUTO_DELETE_TIME: int = 60  # Auto delete time changed to 60 seconds
 
     @classmethod
     def get_ttl(cls, key_type: str) -> int:
@@ -236,4 +237,3 @@ class CachePatterns:
     @staticmethod
     def group_settings(group_id: str) -> str:
         return f"group_settings:{group_id}"
-
