@@ -141,42 +141,32 @@ class UserCallbackHandler(BaseCommandHandler):
             )
 
         # Send welcome message
-        buttons = [
-            [
-                InlineKeyboardButton(
-                    "➕ Add me to Group",
-                    url=f"https://t.me/{self.bot.bot_username}?startgroup=true"
-                )
-            ],
-            [
-                InlineKeyboardButton("📚 Help", callback_data="help"),
-                InlineKeyboardButton("ℹ️ About", callback_data="about")
-            ],
-            [
-                InlineKeyboardButton("📊 Stats", callback_data="stats"),
-                InlineKeyboardButton("💎 Premium", callback_data="plans")
-            ]
-        ]
-
-        if self.bot.config.SUPPORT_GROUP_URL and self.bot.config.SUPPORT_GROUP_NAME:
-            buttons.append([
-                InlineKeyboardButton(
-                    f"💬 {self.bot.config.SUPPORT_GROUP_NAME}",
-                    url=self.bot.config.SUPPORT_GROUP_URL
-                )
-            ])
-        buttons.append([
-            InlineKeyboardButton("📁 Search Files", switch_inline_query_current_chat='')
-        ]
+buttons = [
+    [
+        InlineKeyboardButton(
+            "➕ Add me to Group",
+            url=f"https://t.me/{self.bot.bot_username}?startgroup=true"
         )
-        buttons.append([
-            InlineKeyboardButton("🍺 Buy me a Beer", url=self.bot.config.PAYMENT_LINK)
-        ])
-        mention = query.from_user.mention
-        welcome_text = config_messages.START_MSG.format(mention=mention)
+    ],
+    [
+        InlineKeyboardButton("🎌 Help", callback_data="help"),
+        InlineKeyboardButton("🎃 About", callback_data="about")
+    ]
+]
 
-        await query.message.edit_text(
-            welcome_text,
-            reply_markup=InlineKeyboardMarkup(buttons)
+if self.bot.config.SUPPORT_GROUP_URL and self.bot.config.SUPPORT_GROUP_NAME:
+    buttons.append([
+        InlineKeyboardButton(
+            f"💬 {self.bot.config.SUPPORT_GROUP_NAME}",
+            url=self.bot.config.SUPPORT_GROUP_URL
         )
-        await query.answer()
+    ])
+
+mention = query.from_user.mention
+welcome_text = config_messages.START_MSG.format(mention=mention)
+
+await query.message.edit_text(
+    welcome_text,
+    reply_markup=InlineKeyboardMarkup(buttons)
+)
+await query.answer()
