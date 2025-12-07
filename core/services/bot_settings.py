@@ -303,7 +303,7 @@ class BotSettingsService:
         },
         'START_MESSAGE': {
             'type': 'str',
-            'default': '<b>👋 Welcome {mention}!</b>\n\nI\'m an advanced media search bot with powerful features.\n\n🔍 <b>Features:</b>\n- Fast indexed search\n- Group filter management\n- File indexing from channels\n- Inline search support\n\nUse /help to learn more about my features.',
+            'default': '<b>👋 ʜᴇʟʟᴏ\n\nɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀғᴜʟ ʙᴏᴛ ᴛʜᴀᴛ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ, ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇsᴘᴏɴᴅ ᴡʜᴇɴ ᴀɴʏ ᴜsᴇʀ sᴇɴᴅs ᴀ ᴄᴏɴᴛᴇɴᴛ ɴᴀᴍᴇ.\n\n➜ ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs ᴀʀᴇ ʀᴇǫᴜɪʀᴇᴅ ᴛᴏ ᴍᴀɴᴀɢᴇ ᴄᴏɴᴛᴇɴᴛ ᴀᴄᴄᴇss.',
             'description': 'Custom start message template (supports HTML)',
             'category': 'customization'
         },
